@@ -1,19 +1,27 @@
+import WhatsappImage from "../../assets/image/whatsapp.png";
 import { createStaticPix } from "pix-utils";
+
+import { useState, useEffect } from "react";
 import { QRCodeSVG } from "qrcode.react";
-import { Buffer } from 'buffer';
 import * as S from "./style";
 
 const PaymentPix = ({ onCopied }) => { // recebe a função do pai
 
-  const pix = createStaticPix({
-    pixKey: "ad250fb6-ed25-4797-8f39-360b503158f4",
-    merchantName: "GUSTAVO NOGUEIRA",
-    merchantCity: "SALVADOR",
-    transactionAmount: parseFloat(15.11) || undefined,
-    infoAdicional: "CINÉAGAPE - INGRESSO - HORÁRIO: 14h30"
-  });
+  const [brCode, setBrCode] = useState("");
 
-  const brCode = pix.toBRCode();
+  useEffect(() => {
+    // Busca o BR Code da API
+    fetch("/api/pix", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ transactionAmount: 15.11 })
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.brCode) setBrCode(data.brCode);
+      })
+      .catch(err => console.error(err));
+  }, []);
 
   const redirecionar = () => {
     window.open("https://api.whatsapp.com/send/?phone=71988851845&text&type=phone_number&app_absent=0");

@@ -11,14 +11,12 @@
   },
   "dependencies": {
     "@react-input/mask": "^2.0.4",
-    "buffer": "^6.0.3",
     "lucide-react": "^0.553.0",
     "pix-utils": "^2.8.2",
     "qrcode.react": "^4.2.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.5",
-    "rollup-plugin-node-polyfills": "^0.2.1",
     "styled-components": "^6.1.19"
   },
   "devDependencies": {
