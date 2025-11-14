@@ -24,7 +24,7 @@ export const Input = styled.input`
     border-color: #E11616;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     width: 315px;
 
   

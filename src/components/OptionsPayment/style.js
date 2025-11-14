@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: flex;
   gap: 16px;
 
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     align-items: center;
   }
 `
@@ -21,7 +21,7 @@ export const OptionPix = styled.div`
   display: flex;
   gap: 12px;
 
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     padding: 24px 12px;
     width: 300px;
   }
@@ -41,7 +41,7 @@ export const OptionCartao = styled.div`
     font-size: 40px;
   } 
 
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     padding: 24px 12px;
     width: 300px;
   }
@@ -50,7 +50,7 @@ export const OptionCartao = styled.div`
 export const TitleContainer = styled.div`
   text-align: center;
   font-size: 20px;
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     font-size: 16px;
   }
 
@@ -59,7 +59,7 @@ export const TitleContainer = styled.div`
 export const Title = styled.h1`
   font-size: 20px;
 
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     font-size: 16px;
   }
 `
@@ -68,7 +68,7 @@ export const Phrase = styled.p`
   font-size: 13px;
   text-align: left;
 
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     font-size: 10px;
   }
 `
@@ -102,7 +102,7 @@ export const Button = styled.div`
     background-color: #E11616;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     padding: 16px 112px;  
   }
 `;

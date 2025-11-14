@@ -7,7 +7,7 @@ export const DivComponent = styled.div`
   height: 100vh;
   width: 50%;
 
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     width: 100%;
     height: 47.4vh;
 
@@ -29,7 +29,7 @@ export const Central = styled.div`
   gap: 12px;
   margin-left: 1vw;
 
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     display: block;
     margin: 0 auto;
   }
@@ -45,7 +45,7 @@ export const ImageDiv = styled.div`
    height: 68vh;
    width: 46vw;
 
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     background-size: cover; /* cobre toda a área */
     background-position: center; /* centraliza o corte */
     background-repeat: no-repeat;
@@ -62,7 +62,7 @@ export const DivText = styled.div`
   display: flex;
   gap: 14px;
 
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `
@@ -85,7 +85,7 @@ export const ContainerMain = styled.main`
   display: flex;
   position: relative;
 
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     min-width: 100vw;
     height: 125vh;
     display: block;
@@ -135,7 +135,7 @@ export const Phrase = styled.p`
   margin-bottom: 20px;
   font-weight: 600;
 
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     font-size: 17px;
   }
 `;
@@ -159,7 +159,7 @@ export const Footer = styled.div`
     color: #024BE9;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     width: 100%;
     right: 0;
   }
@@ -170,7 +170,7 @@ export const LinkGroup = styled.a`
   margin-top: 24px;
   color: #024BE9;
 
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     font-size: 14px;
   }
 `
@@ -197,7 +197,7 @@ export const CopiedText = styled.p`
   opacity: ${props => (props.visible ? 1 : 0)};
   transform: translateX(-50%);
 
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     padding: 12px 24px;
     width: 348px;
     top: 2vh;
@@ -215,7 +215,7 @@ export const PhraseDuv = styled.p`
     color: #024BE9;
   }
   
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     font-size: 12px;
   }
 

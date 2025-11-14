@@ -27,7 +27,7 @@ export const ContainerInput = styled.div`
       text-decoration: none;
   }
   
-  @media (max-width: 400px) { 
+  @media (max-width: 768px) { 
     span {
       position: absolute;
       top: 10px;
@@ -43,7 +43,7 @@ export const InputCopied = styled.input.attrs({ type: "text" })`
   cursor: pointer;
   width: 447px;
 
-  @media (max-width: 400px) { 
+  @media (max-width: 768px) { 
     padding: 10px 40px 10px 12px;
     font-size: 15px;
     width: 300px;
@@ -81,7 +81,7 @@ export const ButtonWhats = styled.div`
     color: #000000;
   }
 
-  @media (max-width: 400px) { 
+  @media (max-width: 768px) { 
     padding: 14px 56px;
     border-radius: 6px;
     font-weight: 700;
@@ -99,7 +99,7 @@ export const ImageDiv = styled.div`
   height: 24px;
   width: 24px;
   
-  @media (max-width: 400px) { 
+  @media (max-width: 768px) { 
     height: 16px;
     width: 16px;
   }

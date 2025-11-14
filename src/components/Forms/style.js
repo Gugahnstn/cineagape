@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FormComponent = styled.form`
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     width: 320px;
     margin: 0 auto;
   }
@@ -75,7 +75,7 @@ export const LabelCheckbox = styled.label`
   font-weight: 400;
   display: block;
 
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     width: 92%;
     text-align: justify;
   }
@@ -101,7 +101,7 @@ export const Button = styled.button`
     background-color: #E11616;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     margin: 12px auto 0 auto;
     padding: 18px 112px;  
   }
