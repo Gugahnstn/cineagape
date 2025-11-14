@@ -7,7 +7,7 @@ import Logo from "../../assets/image/Logo-2.svg";
 import * as S from "./style";
 import { useState } from "react";
 
-const Register = () => {
+const RegisterComponent = () => {
     const [modalVisible, setModalVisible] = useState(false);
     const [state, setState] = useState(0);
     const [copiedMessage, setCopiedMessage] = useState(false);
@@ -108,4 +108,4 @@ const Register = () => {
     );
 };
 
-export default Register;
+export default RegisterComponent;

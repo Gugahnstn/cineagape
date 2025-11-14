@@ -1,5 +1,5 @@
 import { GlobalStyle } from "./style/global/style";
-import RoutesComponent from "./Routes";
+import RegisterComponent from "./pages/Register";
 import { Buffer } from 'buffer';
 
 const App = () => {
@@ -7,7 +7,7 @@ const App = () => {
   return (
     <>
       <GlobalStyle />
-      <RoutesComponent/>
+      <RegisterComponent/>
     </>
   )
 }
