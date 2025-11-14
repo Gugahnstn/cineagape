@@ -1,7 +1,7 @@
 import { useState } from "react"
 import * as S from "./style"
 
-const OptionsPayment = ({ onChoosePayment }) => {
+const OptionsPayment = ({ onChoosePayment}) => {
   const [select, setSelect] = useState("");
 
   const optionPix = () => {

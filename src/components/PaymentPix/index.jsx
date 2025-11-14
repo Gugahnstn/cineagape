@@ -1,10 +1,10 @@
 import WhatsappImage from "../../assets/image/whatsapp.png";
 import { createStaticPix } from "pix-utils";
-
 import { QRCodeSVG } from "qrcode.react";
+import { useEffect } from "react";
 import * as S from "./style";
 
-const PaymentPix = ({ onCopied }) => { // recebe a função do pai
+const PaymentPix = ({ onCopied, onComplete }) => { 
 
   const pix = createStaticPix({
     pixKey: "ad250fb6-ed25-4797-8f39-360b503158f4",
@@ -19,6 +19,12 @@ const PaymentPix = ({ onCopied }) => { // recebe a função do pai
   const redirecionar = () => {
     window.open("https://api.whatsapp.com/send/?phone=71988851845&text&type=phone_number&app_absent=0");
   }
+
+  useEffect(() => {
+    if (typeof onComplete === "function") {
+      onComplete(); 
+    }
+  }, [onComplete]);
 
   const copied = () => {
     if (navigator.clipboard && navigator.clipboard.writeText) {

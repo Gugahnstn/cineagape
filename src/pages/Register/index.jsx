@@ -5,15 +5,21 @@ import FormsComponent from "../../components/Forms";
 import Logo from "../../assets/image/Logo-2.svg";
 
 import * as S from "./style";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const RegisterComponent = () => {
     const [modalVisible, setModalVisible] = useState(false);
-    const [state, setState] = useState(0);
+    const [state, setState] = useState(() => {
+        return parseInt(localStorage.getItem("currentStep")) || 0;
+    });
     const [copiedMessage, setCopiedMessage] = useState(false);
 
+    useEffect(() => {
+        localStorage.setItem("currentStep", state);
+    }, [state]);
+
     const handleNextStep = (value) => {
-        if(value === false) {
+        if (value === false) {
             setState(1);
         }
     };
@@ -26,6 +32,10 @@ const RegisterComponent = () => {
         } else {
             console.error("Não funcionou");
         }
+    };
+
+    const handlePaymentComplete = () => {
+        localStorage.removeItem("currentStep");
     };
 
     const handlerVisible = (value) => {
@@ -69,16 +79,18 @@ const RegisterComponent = () => {
                 <S.Phrase>INSCRIÇÃO PARA O CINEMA</S.Phrase>
 
                 <div style={{ display: state === 0 ? "block" : "none" }}>
-                    <FormsComponent  
+                    <FormsComponent
                         termsClick={() => handlerVisible(true)}
                         onNextStep={handleNextStep}
                     />
                 </div>
                 <div style={{ display: state === 1 ? "block" : "none" }}>
-                    <OptionsPayment onChoosePayment={handleNextStepPix}/>
+                    <OptionsPayment 
+                        onChoosePayment={handleNextStepPix} 
+                    />
                 </div>
                 {state === 2 && (
-                    <PaymentPix onCopied={handleCopied} />
+                    <PaymentPix onCopied={handleCopied} onComplete={handlePaymentComplete}/>
                 )}
 
                 {(state === 0 || state === 1) && (
