@@ -1,6 +1,6 @@
-import WhatsappImage from "../../assets/image/whatsapp.png";
 import { createStaticPix } from "pix-utils";
 import { QRCodeSVG } from "qrcode.react";
+import { Buffer } from 'buffer';
 import * as S from "./style";
 
 const PaymentPix = ({ onCopied }) => { // recebe a função do pai
